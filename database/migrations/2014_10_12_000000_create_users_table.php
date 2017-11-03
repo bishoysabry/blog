@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('gender');
             $table->string('hobbies')->nullable();
             $table->boolean('confirmed')->default(FALSE);
+            $table->rememberToken();
             $table->timestamps();
         });
     }
