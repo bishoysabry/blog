@@ -42,8 +42,17 @@
                             <label for="gender" class="col-md-4 control-label">Gender</label>
 
                             <div class="col-md-6">
-                              <input checked="checked" name="gender" type="radio" value="male"><br>
-                              <input  name="gender" type="radio" value="female">
+                              <input checked="checked" name="gender" type="radio" value="male"> Male<br>
+                              <input  name="gender" type="radio" value="female"> Female
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="hobbies" class="col-md-4 control-label">Hobbies</label>
+
+                            <div class="col-md-6">
+                            <input name="football" type="checkbox" value="football"> Football <br>
+                            <input name="valleyball" type="checkbox" value="valleyball"> Vallyball
 
                             </div>
                         </div>

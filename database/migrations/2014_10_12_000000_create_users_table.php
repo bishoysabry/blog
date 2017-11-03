@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('gender');
-            $table->string('hobbies');
+            $table->string('hobbies')->nullable();
             $table->boolean('confirmed')->default(FALSE);
             $table->timestamps();
         });
