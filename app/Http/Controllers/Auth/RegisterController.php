@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
-    protected function register (Request $request)
+    protected function register(Request $request)
     {
       $input = $request->all();
       $validator = $this->validator($input);

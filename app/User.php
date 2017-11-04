@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
     ];
+    /**
+     * Accessor for name to make it uppercase
+     */
+    public function getNameAttribute($value)
+    {
+      return strtoupper($value);
+    }
 }
