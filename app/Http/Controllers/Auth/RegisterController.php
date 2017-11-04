@@ -6,7 +6,8 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-
+use Illuminate\Http\Request;
+use Mail;
 class RegisterController extends Controller
 {
     /*
@@ -69,5 +70,41 @@ class RegisterController extends Controller
             'hobbies' =>implode(" ",$data['hobbies']),
             'password' => bcrypt($data['password']),
         ]);
+    }
+    protected function register (Request $request)
+    {
+      $input = $request->all();
+      $validator = $this->validator($input);
+      if($validator->passes()){
+        $data=$this->create($input)->toarray();
+        $data['token']=str_random(25);
+        $user=User::find($data['id']);
+        $user->token=$data['token'];
+        $user->save();
+        Mail::send('mails.confirmation',$data,function($message)use($data){
+          $message->to($data['email']);
+          $message->subject('Registeration confirmation');
+
+        });
+        return redirect(route('login'))->with('status','confirmation sent , check ur mail .');
+
+      }
+      return redirect(route('login'))->with('status',$validator->errors);
+
+    }
+    public function confirmation ($token)
+    {
+      $user=User::where('token',$token)->first();
+      if(!is_null($user))
+      {
+        $user->confirmed=1;
+        $user->token='';
+        $user->save();
+        return redirect(route('login'))->with('status','confirmation done');
+
+      }
+      return redirect(route('login'))->with('status','some thing went wrong try again later');
+
+
     }
 }
