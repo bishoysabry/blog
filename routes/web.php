@@ -19,3 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/confirmation/{token}', 'Auth\RegisterController@confirmation')->name('confirmation');
+
+Route::resource('Profile','ProfileController');
+Route::resource('Post','PostController');
+Route::resource('Category','CategoryController');
+Route::resource('Comment','CommentController');

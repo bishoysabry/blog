@@ -68,8 +68,12 @@ class RegisterController extends Controller
             'email' =>   filter_var ( $data['email'], FILTER_SANITIZE_EMAIL),
             'gender' => $data['gender'],
             'hobbies' =>implode(" ",$data['hobbies']),
-            'password' => bcrypt($data['password']),
+            'password' =>bcrypt( filter_var ( $data['password'], FILTER_SANITIZE_STRING) ),
         ]);
+    }
+    protected function update(array $data)
+    {
+
     }
     protected function register(Request $request)
     {
@@ -89,7 +93,7 @@ class RegisterController extends Controller
         return redirect(route('login'))->with('status','confirmation sent , check ur mail .');
 
       }
-      return redirect(route('login'))->with('status',$Validator->errors()->toArray());
+      return redirect(route('login'))->with('status',$validator->errors()->toArray());
 
     }
     public function confirmation ($token)

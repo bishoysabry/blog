@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'gender', 'hobbies','confirmed'
+        'name', 'email', 'password', 'gender', 'hobbies','confirmed','image'
     ];
 
     /**
@@ -33,4 +33,6 @@ class User extends Authenticatable
     {
       return strtoupper($value);
     }
+
+
 }

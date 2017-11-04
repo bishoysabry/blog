@@ -1,19 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\User;
+use Request;
 
-use Illuminate\Http\Request;
-
-class ProfileControlller extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+
     }
 
     /**
@@ -35,6 +35,7 @@ class ProfileControlller extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
@@ -45,6 +46,8 @@ class ProfileControlller extends Controller
      */
     public function show($id)
     {
+      $user=User::find($id);
+    return view('profile',compact('user'));
         //
     }
 
@@ -57,6 +60,8 @@ class ProfileControlller extends Controller
     public function edit($id)
     {
         //
+        $user=User::find($id);
+      return view('editprofile',compact('user'));
     }
 
     /**
@@ -68,7 +73,30 @@ class ProfileControlller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+
+
+
+        $user=User::find($id);
+        /**
+         * lw kont 3mlt $request->all mkan4 a4t8l :D de 7aga mrar
+         */
+        $user->name = Request::input('name');
+        $user->email = Request::input('email');
+        $user->hobbies = implode(" ",Request::input('hobbies'));
+        $user->gender = Request::input('gender');
+
+        $image =Request::input('image');
+        if($image){
+          $imageName=$image->getClientOriginalName();
+          $image->move('images',$imageName);
+          $user->image=$imageName;
+
+        }
+        $user->save();
+
+          return view('home',compact('image'));
+      //  return redirect()->route('profile');
     }
 
     /**
