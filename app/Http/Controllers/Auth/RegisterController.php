@@ -89,7 +89,7 @@ class RegisterController extends Controller
         return redirect(route('login'))->with('status','confirmation sent , check ur mail .');
 
       }
-      return redirect(route('login'))->with('status',$validator->errors);
+      return redirect(route('login'))->with('status',$Validator->errors()->toArray());
 
     }
     public function confirmation ($token)

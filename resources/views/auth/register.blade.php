@@ -8,11 +8,7 @@
                 <div class="panel-heading">Register</div>
 
                 <div class="panel-body">
-                  @if($status=Session::get('status'))
-                  <div class="alert alert-info">
-                    {{$status}}
-                  </div>
-                  @endif
+
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
@@ -59,7 +55,7 @@
                             <input   name="hobbies[]" type="checkbox" value="Football"> Football <br>
                             <input   name="hobbies[]" type="checkbox" value="Vallyball"> Vallyball <br>
                             <input   name="hobbies[]" type="checkbox" value="Swimming"> Swimming <br>
-
+                            <input   name="hobbies[]" type="hidden" value="">
 
                             </div>
                         </div>
