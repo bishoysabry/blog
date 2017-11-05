@@ -20,7 +20,7 @@
                       <input id="post_id" type="hidden" name="post_id" value="{{$post->id}}">
                       <input id="user_id" type="hidden" name="user_id" value="{{$auth->id}}">
                       <button  type="submit" class="btn btn-primary ">
-                       comment
+                         {{trans('file.comment')}}
                       </button>
                       </div>
                  </form>

@@ -27,5 +27,6 @@ Route::get('/user/confirmation/{token}', 'Auth\RegisterController@confirmation')
 
 Route::resource('Profile','ProfileController');
 Route::resource('Post','PostController');
+Route::resource('Users','UsersController');
 Route::resource('Category','CategoryController');
 Route::resource('Comment','CommentController');

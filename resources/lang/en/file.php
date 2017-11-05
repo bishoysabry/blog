@@ -7,9 +7,9 @@ return [
 
 'deactivate'=>'Deactivate',
 'logout'=>'Logout',
-''=>'',
-''=>'',
-''=>'',
+'comment'=>'Comment',
+'edit'=>'Edit',
+'delete'=>'Delete',
 ''=>'',
 ''=>'',
 ''=>'',
