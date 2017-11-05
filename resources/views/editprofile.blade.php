@@ -4,12 +4,17 @@
 <div class="container">
     <div class="row">
 
-        <form class="form-horizontal" method="POST"  enctype="multipart/form-data"action="/Profile/{{$user->id}}">
-          {{method_field('PUT')}}
+        <form class="form-horizontal" method="POST"   enctype="multipart/form-data"action="{{route('Profile.store')}}">
+
             {{ csrf_field() }}
             <div class=col-md-3>
-            <img style ="height:300px"  class=" img-circle"
-            src="{{url('images' , $user->image?'$user->image':'profile.jpg')}}"   />
+              <img style ="height:300px; width:300px"  class=" img-circle"
+              @if(!is_null($user->image))
+                src="/images/{{$user->image}}"
+                @else
+                src="{{url('images' ,'profile.jpg')}}"
+                @endif
+                 />
 
 
   <label for="image">change image</label>
@@ -25,6 +30,7 @@
 
                   <div class="col-md-7">
                       <input id="name" type="text" class="form-control" name="name" value="{{ $user->name }}" required autofocus>
+                      <input id="id" type="hidden"  name="id" value="{{ $user->id }}" >
 
                       @if ($errors->has('name'))
                           <span class="help-block">

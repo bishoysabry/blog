@@ -5,8 +5,14 @@
     <div class="row">
       <div class=col-md-2>
 
-        <img style ="height:300px"  class=" img-circle"
-        src="{{url('images' , $user->image?'$user->image':'profile.jpg')}}"   />
+        <img style ="height:300px; width:300px"  class=" img-circle"
+        @if(!is_null($user->image))
+          src="/images/{{$user->image}}"
+          @else
+          src="{{url('images' ,'profile.jpg')}}"
+          @endif
+           />
+
 
 
       </div>
