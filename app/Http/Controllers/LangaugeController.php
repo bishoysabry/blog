@@ -12,11 +12,11 @@ class LangaugeController extends Controller
     //
     public function index ()
     {
-      if(!\Session::has('locale'))
+      if(!Session::has('locale'))
       {
-        \Session::put('locale',Input::get('locale'));
+        Session::put('locale',Input::get('locale'));
       }else{
-        Session::set('locale',Input::get('locale'));
+        Session::put('locale',Input::get('locale'));
 
       }
       return Redirect::back();
