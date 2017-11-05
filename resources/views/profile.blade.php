@@ -27,6 +27,7 @@
                       @endforeach
 <a  class="btn btn-primary" href="/Profile/{{$user->id}}/edit"> Edit </a>
 
+
         </div>
 
     </div>

@@ -97,7 +97,17 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
+      $user=User::find($id);
+      $user->reason = $request->reason;
+      $user->closed =$request->closed;
+      $user->save();
+        return view('home');
 
+    }
+    public function deactivate($id )
+    {
+      $user=User::find($id);
+      return view('deactivate',compact('user'));
 
     }
 

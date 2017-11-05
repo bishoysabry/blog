@@ -58,6 +58,12 @@
                                       </a>
 
                                   </li>
+                                  <li>
+                                      <a href="/Profile/deactivate/{{Auth::user()->id}}">
+                                        Deactivate
+                                      </a>
+
+                                  </li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

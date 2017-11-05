@@ -16,9 +16,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('image-upload','ImageController@imageUpload');
-Route::post('image-upload','ImageController@imageUploadPost');
+
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/Profile/deactivate/{id}', 'ProfileController@deactivate');
 Route::get('/user/confirmation/{token}', 'Auth\RegisterController@confirmation')->name('confirmation');
 
 Route::resource('Profile','ProfileController');
