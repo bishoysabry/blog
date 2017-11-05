@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->string('post');
             $table->string('user_id');
-            $table->string('category_id');
+            $table->string('category_id')->nullable();
             $table->timestamps();
         });
     }

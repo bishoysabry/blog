@@ -82,8 +82,8 @@
                         <li>
                           <form action="langauge" method="POST">
                             <select  style="margin-top:15px"name="locale">
-                              <<option value="en"{{App::getLocale()=='en'?'selected':''}}>English</option>
-                              <<option value="ar"{{App::getLocale()=='ar'?'selected':''}}>Arabic</option>
+                              <option value="en"{{App::getLocale()=='en'?'selected':''}}>English</option>
+                              <option value="ar"{{App::getLocale()=='ar'?'selected':''}}>Arabic</option>
                             </select>
                               {{ csrf_field() }}
                               <input style="font-size:10px;" type="submit" value="Choose">

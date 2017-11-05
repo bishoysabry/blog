@@ -1,0 +1,101 @@
+[33mcommit bba3f960e5d618e24cfffb2c71cb30475fe5b481[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Sun Nov 5 16:08:33 2017 +0200
+
+     langauge switcher  done
+
+[33mcommit fa7c95d9a7dfcdff0759111e5ac8bf939947e580[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Sun Nov 5 14:06:52 2017 +0200
+
+     deactivate done
+
+[33mcommit dbd67c1b75da5008f4aea46c4f83b81e67fb52a9[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Sun Nov 5 12:54:11 2017 +0200
+
+     el7 photo upload a4t8lt
+
+[33mcommit e1e2295e8ee475c3795f663097b99ef6058f6cd8[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Sun Nov 5 01:11:45 2017 +0200
+
+     profile page done and edit page done but update button doesnt work
+
+[33mcommit 36fe8bcc2bede2372a2a5d472b89afc5feddefff[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Sat Nov 4 16:06:32 2017 +0200
+
+    added Profile - post -category - comment controllers
+
+[33mcommit 8490287dd1b4bb6e56435d75f5669ac21c685b26[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Sat Nov 4 16:03:46 2017 +0200
+
+    added profile toggle
+
+[33mcommit 8a3ebcffe7dbd39ccff63d6e210f472621a2e071[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Sat Nov 4 15:59:47 2017 +0200
+
+    add closed to user table and refresh and change the app name
+
+[33mcommit d5bc92ed56fab5b2cd9978a28386e2fd759613f1[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Sat Nov 4 15:53:47 2017 +0200
+
+    add closed to user table and refresh
+
+[33mcommit 2f940ae87f4c847d257973baed8861c574c0a2c0[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Sat Nov 4 14:27:30 2017 +0200
+
+    first email confirm method worked and alert done
+
+[33mcommit 17913ef3041ba3f7ac22056c619d45ec26152d06[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Sat Nov 4 13:26:09 2017 +0200
+
+    first email confirm method worked but alert doesnt
+
+[33mcommit 834c427df0443a357bafa33221fc4da0c7e44f9e[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Sat Nov 4 11:16:55 2017 +0200
+
+    added token to users and refresh
+
+[33mcommit e05adddfe08b9b018121df2d64e95406a6f16350[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Fri Nov 3 23:37:36 2017 +0200
+
+    validate register form inputs
+
+[33mcommit efc12ce8591778b8d25963d2d033dff05401ac60[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Fri Nov 3 22:52:39 2017 +0200
+
+    add remembertkoen and refresh migrate
+
+[33mcommit 5a24ef05ce8f1cfab4ab7a4fbd7b37903ebe772a[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Fri Nov 3 22:39:11 2017 +0200
+
+    add null to hobbies and radiobutton/checklist done
+
+[33mcommit 8e7e3a35ce7407059b4549067607a9e6f9905106[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Fri Nov 3 22:30:56 2017 +0200
+
+    tables migrated
+
+[33mcommit 493407fac2656a27f292886c54b3377f20e30733[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Fri Nov 3 21:06:22 2017 +0200
+
+    sql lenght modified
+
+[33mcommit 03e2bc7d7ef59a27546b6c93a47a0aa117e9c118[m
+Author: bishoy sabry <bishoysabry2012@gmail.com>
+Date:   Fri Nov 3 21:03:46 2017 +0200
+
+    laravel installed

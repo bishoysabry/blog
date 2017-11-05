@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Category;
+use App\Post;
+use Auth;
 class PostController extends Controller
 {
     /**
@@ -24,6 +26,8 @@ class PostController extends Controller
     public function create()
     {
         //
+          $categories=Category::all();
+            return view('createpost',compact('categories')); // 3dy m3ah var categories
     }
 
     /**
@@ -35,6 +39,10 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+
+        Post::create($request->all());
+
+          return back();
     }
 
     /**

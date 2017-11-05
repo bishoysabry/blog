@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
 
 class CategoryController extends Controller
 {
@@ -24,6 +25,8 @@ class CategoryController extends Controller
     public function create()
     {
         //
+        $categories=Category::all(); //7ot fl var da kol elly fl gdwl elly model bta3o esmo Category
+        return view('createcategory',compact('categories')); // 3dy m3ah var categories
     }
 
     /**
@@ -34,6 +37,8 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+      Category::create($request->all());
+        return back();
         //
     }
 
