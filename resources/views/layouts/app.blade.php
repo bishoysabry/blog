@@ -54,13 +54,13 @@
                                 <ul class="dropdown-menu" role="menu">
                                   <li>
                                       <a href="/Profile/{{Auth::user()->id}}">
-                                          Profile
+                                        {{trans('file.profile')}}
                                       </a>
 
                                   </li>
                                   <li>
                                       <a href="/Profile/deactivate/{{Auth::user()->id}}">
-                                        Deactivate
+                                          {{trans('file.deactivate')}}
                                       </a>
 
                                   </li>
@@ -68,7 +68,7 @@
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                              {{trans('file.logout')}}
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -79,7 +79,19 @@
                                 </ul>
                             </li>
                         @endif
+                        <li>
+                          <form action="langauge" method="POST">
+                            <select  style="margin-top:15px"name="locale">
+                              <<option value="en"{{App::getLocale()=='en'?'selected':''}}>English</option>
+                              <<option value="ar"{{App::getLocale()=='ar'?'selected':''}}>Arabic</option>
+                            </select>
+                              {{ csrf_field() }}
+                              <input style="font-size:10px;" type="submit" value="Choose">
+                          </form>
+                        </li>
+
                     </ul>
+
                 </div>
             </div>
         </nav>

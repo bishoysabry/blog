@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
 
           <div class="alert alert-info">
-          
+          {{trans('file.deactivate')}}
           </div>
 
         </div>

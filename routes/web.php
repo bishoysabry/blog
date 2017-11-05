@@ -14,6 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/langauge', array(
+  'Middleware'=>'LangaugeSwitcher' ,
+  'uses'=>'LangaugeController@index'
+));
 
 Auth::routes();
 
