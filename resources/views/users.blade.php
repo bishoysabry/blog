@@ -11,8 +11,8 @@
           {{$user->gender}} <br>
           {{$user->hobbies}} <br>
           <div class="pull-right">
-          <a  class="btn btn-primary" href="{{route('Users.edit',$user->id)}}" > edit </a>
-          <a  class="btn btn-danger"  href="{{route('Users.destroy',$user->id)}}" > delete </a>
+          <a  class="btn btn-primary" href="{{route('Users.edit',$user->id)}}" > {{trans('file.edit')}} </a>
+          <a  class="btn btn-danger"  href="{{route('Users.destroy',$user->id)}}" > {{trans('file.delete')}} </a>
 
         </div>
         <br>
